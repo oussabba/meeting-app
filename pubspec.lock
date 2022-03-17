@@ -8,6 +8,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.8.2"
+  avatar_stack:
+    dependency: "direct main"
+    description:
+      name: avatar_stack
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.4"
   boolean_selector:
     dependency: transitive
     description:
@@ -102,13 +109,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
-  overlay_group_avatar:
-    dependency: "direct main"
-    description:
-      name: overlay_group_avatar
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.2"
   path:
     dependency: transitive
     description:

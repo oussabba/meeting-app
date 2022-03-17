@@ -1,5 +1,6 @@
+import 'package:avatar_stack/avatar_stack.dart';
+import 'package:avatar_stack/positions.dart';
 import 'package:flutter/material.dart';
-import 'package:overlay_group_avatar/overlay_group_avatar.dart';
 import 'package:sliver_header_delegate/sliver_header_delegate.dart';
 
 class MeetingView extends StatelessWidget {
@@ -169,6 +170,57 @@ class MeetingView extends StatelessWidget {
                           color: theme.colorScheme.primary,
                         ),
                       ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 20),
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: AvatarStack(
+                                settings: RestrictedAmountPositions(
+                                  minCoverage: 0.4,
+                                ),
+                                height: 55,
+                                avatars: const [
+                                  NetworkImage(
+                                      'https://mir-s3-cdn-cf.behance.net/project_modules/disp/ea7a3c32163929.567197ac70bda.png'),
+                                  NetworkImage(
+                                      'https://i.kinja-img.com/gawker-media/image/upload/t_original/ijsi5fzb1nbkbhxa2gc1.png'),
+                                  NetworkImage(
+                                      'https://i.pinimg.com/564x/30/24/f8/3024f8d283b734bd6b7e4fc5531fe2e9--create-a-cartoon-avatar.jpg'),
+                                  NetworkImage(
+                                      'http://www.paulseward.com/downloads/Avatars/cartoon_avatar.png'),
+                                ],
+                              ),
+                            ),
+                            const Expanded(
+                              child: Text(
+                                '+10 participate',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      ElevatedButton(
+                        style: ButtonStyle(
+                            minimumSize: MaterialStateProperty.all(
+                                const Size(double.infinity, 55)),
+                            shape: MaterialStateProperty.all<
+                                RoundedRectangleBorder>(RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12.0),
+                            ))),
+                        onPressed: () {},
+                        child: const Text(
+                          'Take part',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700),
+                        ),
+                      )
                     ],
                   ),
                 )
