@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meetingappui/create_meeting_view.dart';
 import 'package:meetingappui/meeting_view.dart';
 
 void main() {
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Meeting app UI',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         colorScheme: const ColorScheme(
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
         ),
         fontFamily: 'Cabin',
       ),
-      home: const MeetingView(),
+      home: const CreateMeetingView(),
     );
   }
 }
